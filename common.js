@@ -25,8 +25,8 @@ function calculate(p, d) {
 	var chk = validatePace(pace);
 	if(chk != null) return chk;
 	//---------------------------
-	
+	var pc = paceCal(pace,dist);
 	//---------------------------
 	msg = "successfully calculated!"
-	return { "status": 1, "message": msg, "hour": hour, "min": min };
+	return { "status": 1, "message": msg, "hour": pc.hour, "min": pc.min };
 }
